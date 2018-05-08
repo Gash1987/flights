@@ -16,13 +16,17 @@ You are building a flight search web application where you need to connect to a 
 Your application will work as a middle tier and cache some information in the sense that will persist data that is not very likely to change in a short/med period (like airport codes). This information can be saved in database or using a Non Relational Database (NRDMS).
 
 - Scope of this is:
-   - To be able to search for flight availability using external json api 
+   - To be able to search for flight availability using external json api
    - Retrieve airport codes and names
    - Build backend JSON rest services
    - Build Frontend controllers and map model
 
 - Out of scope:
   - Bookings
+
+## Tests
+I should be able to follow continous testing using CI/CD tools like SemaphoreCI, CircleCI, etc.
+
 
 ## Expected Results
 I should be able to search for a location and the start / end dates of my trip.
