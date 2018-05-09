@@ -8,6 +8,7 @@
  - WebMock
  - Slim/erb/haml/react(if you want)
  - Sass
+ - Postgres
 
 ## Scenario
 
@@ -16,7 +17,7 @@ You are building a flight search web application where you need to connect to a 
 Your application will work as a middle tier and cache some information in the sense that will persist data that is not very likely to change in a short/med period (like airport codes). This information can be saved in database or using a Non Relational Database (NRDMS).
 
 - Scope of this is:
-   - To be able to search for flight availability using external json api
+   - To be able to search for flight availability using external json api 
    - Retrieve airport codes and names
    - Build backend JSON rest services
    - Build Frontend controllers and map model
@@ -24,10 +25,25 @@ Your application will work as a middle tier and cache some information in the se
 - Out of scope:
   - Bookings
 
-## Tests
-I should be able to follow continous testing using CI/CD tools like SemaphoreCI, CircleCI, etc.
+## Issues 
+Backlog should be registered and updated in Github issues tab.
 
+## Deployment
+Should be deployed to heroku since the first commit 
+
+## Code Correctness
+Use rubocop ensure code is correctly wirtten. Rubocop rules should be provided.
+
+## Code Reviews
+You should create a new branch for each task (issue) and create a PR and assign `@dvarelap` as reviewer.
+
+## Docs
+Create `docs.md` where you put how to install, deploy and use your app.
+
+## Tests 
+I should be able to follow continous testing using CI/CD tools like SemaphoreCI, CircleCI, etc.
 
 ## Expected Results
 I should be able to search for a location and the start / end dates of my trip.
 The application should display real flight availability, you choose how (grouped vs non grouped, high vs low price etc).
+
