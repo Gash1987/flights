@@ -1,8 +1,14 @@
 version: '3'
 services:
-  backend:
+  db:
+    image: postgres
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/data
+  web:
       build: .
       ports:
         - "3000:3000"
       volumes:
         - .:/usr/src/docker_projects/flights-cc
+      depends_on:
+        - db
