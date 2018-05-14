@@ -2,13 +2,16 @@ version: '3'
 services:
   db:
     image: postgres
-    volumes:
-      - ./tmp/db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
   web:
       build: .
       ports:
         - "3000:3000"
       volumes:
         - .:/usr/src/docker_projects/flights-cc
-      depends_on:
-        - db
+      environment:
+        DATABASE_HOST: database
+        POSTGRES_USER: postgres
+        POSTGRES_PASSWORD: admin
